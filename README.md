@@ -9,3 +9,19 @@ The purpose of this flow is to enable contracts to only execute functionality if
 * dao - contains the contract, state and deploy script of the DAO contract
 * svc - contains the REST server for the vouch service
 * client - contains the client contract that needs to only allow vouched callers of a function.
+
+## Steps to Test
+
+> Start arlocal `npx arlocal`
+
+To test this workflow:
+
+1. Deploy DAO contract - `node dao/deploy.js`
+1. Set Public Key - `node dao/set-public-key.js`
+
+> This step will also set an internal JWK in the `svc` directory to be used to create a signature
+
+1. Create Vouch Record for address - `node src/create-vouch.js`
+1. Start vouch service server - `node svc/server.js`
+1. Request a signature for a wallet
+1. 

@@ -6,6 +6,8 @@
   "author": "Tom Wilson <tom@hyper.io>",
   "license": "MIT",
   "dependencies": {
+    "arweave": "^1.11.6",
     "warp-contracts": "^1.2.4"
-  }
+  },
+  "type": "module"
 }
