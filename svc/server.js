@@ -9,9 +9,13 @@ app.get('/', (req, res) => {
   res.send('Hello World')
 })
 
-app.post('/sign', express.json(), (req, res) => {
-  // need to get address and sign address with private key
+app.post('/vouch', express.json(), (req, res) => {
+  // this takes a wallet address
+  // signature = crypto.sign(address, privateKey)
+  // create a transaction using ANS-109
+  // write a Vouch-For transaction
+  // tag Verified-Signature
+  // submit ok.
 
-  console.log(req.body)
   res.send(res.body)
 })
