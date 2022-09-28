@@ -1,8 +1,6 @@
 import { LoggerFactory, WarpFactory } from 'warp-contracts/mjs'
 import fs from 'fs'
 
-LoggerFactory.INST.logLevel('error')
-
 const warp = WarpFactory.forLocal()
 
 const wallet = await warp.testing.generateWallet()
