@@ -1,6 +1,6 @@
 
 async function isAddressVouched(action) {
-  const VOUCHDAO = 'XXXXXXX'
+  const VOUCHDAO = 'hAs-nu__dLM7aWLQRzG0wkouCA0qVw4KAL7Q3DtPUTY'
   // get state of VouchDAO
   const vouchDAOState = await SmartWeave.readContractState(VOUCHDAO)
   // make sure the service is valid
@@ -15,10 +15,10 @@ async function isAddressVouched(action) {
   }
 }
 
-export async handle(state, action) {
+export async function handle(state, action) {
   if (action.input.function === 'stamp') {
     if (isAddressVouched(action)) {
-      // do stuff
+      console.log('CLIENT CONTRACT HANDLE')
     }
   }
 }
