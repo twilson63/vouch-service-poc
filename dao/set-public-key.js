@@ -2,7 +2,7 @@ import Arweave from 'arweave'
 import { WarpFactory } from 'warp-contracts/mjs'
 import fs from 'fs'
 
-const DAO = 'ErPdk0l4_PTy5dxNjJacGQJEIDOOl2P-f0AbpbeoSGs'
+const DAO = 'hAs-nu__dLM7aWLQRzG0wkouCA0qVw4KAL7Q3DtPUTY'
 
 const arweave = Arweave.init({
   host: 'localhost',
@@ -20,8 +20,9 @@ const res = await warp.contract(DAO).connect(wallet).writeInteraction({
   function: 'setPublicKey',
   publicKey: jwk.n
 })
-console.log(res)
+
 await warp.testing.mineBlock()
 
 const result = await warp.contract(DAO).readState()
-console.log(result)
+
+console.log("STATE: ", result.cachedValue.state)

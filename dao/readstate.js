@@ -1,6 +1,6 @@
 import { WarpFactory } from 'warp-contracts/mjs'
 
-const DAO = 'ErPdk0l4_PTy5dxNjJacGQJEIDOOl2P-f0AbpbeoSGs'
+const DAO = 'hAs-nu__dLM7aWLQRzG0wkouCA0qVw4KAL7Q3DtPUTY'
 
 const warp = WarpFactory.forLocal()
 
